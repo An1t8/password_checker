@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #5b7cfa;
+
+    --bg: white;
+    --surface: gray;
+    --text: #1a1d2e;
+    --text-muted: #5a6490;
+    --border: #c0c8e8;
+
+    --weak: #ef4444;
+    --medium: #f59e0b;
+    --good: #3b82f6;
+    --strong: #10b981;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1a1d2e;
+        --surface: #24273a;
+        --text: #ffffff;
+        --text-muted: #8b9cc8;
+        --border: #3a3f6e;
+
+    }
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: var(--bg);   !important;
+    color: var(--text);     !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app {
+    width: 100%;
+    max-width: 500px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    bg: var(--surface);
+}
+
+.section-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.password-input {
+    margin-bottom: 0.75rem;
+}
+
+.toggle-btn {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.toggle-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.strength-bar-track {
+    height: 6px;
+    background: var(--border);
+    border-radius: 99px;
+    margin-bottom: 0.5rem;
+}
+
+.strength-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.3s;
+}
+
+.criteria-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.criterion {
+    color: var(--text-muted);
+}
+
+.criterion.passed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.text-success {
+    color: var(--strong) !important;
+}
+
+.text-error {
+    color: var(--weak) !important;
+}
+
+body, html, #root {
+    background-color: var(--bg) !important;
+}
